@@ -1,0 +1,6 @@
+*~
+*.aux
+*.log
+renv/
+Rplots.pdf
+old/

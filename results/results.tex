@@ -1,0 +1,282 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+% \usepackage{lmodern}
+\usepackage{newtxtext,newtxmath}
+
+\usepackage{geometry}
+\geometry{top=2cm, left=2cm, right=2cm, bottom=2cm}
+\pagestyle{empty}
+
+%% define macro
+% https://latex.org/forum/viewtopic.php?t=3970
+\makeatletter
+\newcommand*\ExpandableInput[1]{\@@input#1 }
+\makeatother
+
+\begin{document}
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.9\textwidth]{Fig/Fig1.pdf}
+ \caption{Correlation of parameters between $\mu$ and $\log \sigma$
+  in animal experiments.
+  (A) scatter plot of $\mu$ and $\log \sigma$ in each drug,
+  and
+  (B) Predicted probability curve in each drug and individual.}
+ \label{fig1}
+\end{figure}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Fig/Fig2.pdf}
+ \caption{Correlation of parameters among drugs in animal experiments.}
+ \label{fig2}
+\end{figure}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Correlation coefficients between $\mu$ and $\log \sigma$ ($r_{\mu - \log \sigma}$)}
+ \label{tbl1}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccc}
+  \toprule
+  \ExpandableInput{Table/Table1.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Correlation coefficients among drugs}
+ \label{tbl2}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccc}
+  \toprule
+   & \multicolumn{2}{c}{all data ($n = 51$)}
+   & \multicolumn{2}{c}{without outliers ($n = 49$)} \\
+  \cmidrule(lr){2-3}
+  \cmidrule(lr){4-5}
+  \ExpandableInput{Table/Table2.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Parameters used in following simulations}
+ \label{tbl3}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccccccc}
+  \toprule
+  \ExpandableInput{Table/Table3.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Fig/Fig3.pdf}
+ \caption{Effect of correlation of parameters
+           between $\mu$ and $\log \sigma$ ($r_{\mu - \log \sigma}$)
+           on duration of Lid in simulation.}
+ \label{fig3}
+\end{figure}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Fig/Fig4.pdf}
+ \caption{Effect of correlation of parameters ($r_{\mu}$ and $r_{\log \sigma}$) between Pro and Lid on duration in simulation ($r_{\mu - \log \sigma}$ is set to 0). (A) Relation of durations between Pro and Lid. (B) Correlation coefficients of duration in several parameters.}
+ \label{fig4}
+\end{figure}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1\textwidth]{Fig/Fig5.pdf}
+ \caption{Effect of correlation of parameters among drugs on duration in simulation.}
+ \label{fig5}
+\end{figure}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Effect of correlation coefficients on duration among drugs}
+ \label{tbl4}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccccc}
+  \toprule
+  & Condition 1 & Condition 2 & Condition 3 & Condition 4 \\
+  \midrule
+  $r_{\mu - \log \sigma}$         & 0 & * & 0 & * \\
+  $r_{\mu}$ and $r_{\log \sigma}$ & 0 & 0 & * & * \\
+  \ExpandableInput{Table/Table4.tex}
+
+  \\[-2ex]
+  \multicolumn{5}{r}{$^\text{*}$Parameters in Table \ref{tbl3} were used.} \\
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Median of duration of local anesthetic agents under each condition}
+ \label{tbl5}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccc}
+  \toprule
+  \ExpandableInput{Table/Table5.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Comparison of duration between Pro and Lid}
+ \label{tbl6}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccccc}
+  \toprule
+  \ExpandableInput{Table/Table6.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\clearpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Supplemental Figure / Table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\figurename}{Supplementary Figure}
+\renewcommand{\tablename}{Supplementary Table}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Spearman's rank correlation coefficients of duration among drugs}
+ \label{Stbl1}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccc}
+  \toprule
+  \ExpandableInput{Table/STable1.tex}
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+
+
+\input{Table/STable2.tex}
+% \input{Table/tbl_sim_correlation_lmer1.tex}
+% \input{Table/tbl_sim_correlation_lmer2.tex}
+% \input{Table/tbl_sim_correlation_LRtest.tex}
+
+
+
+%%%%%%%%%%
+%%%%%%%%%%
+\begin{table}[htbp]
+ \caption{Effect of Spearman's rank correlation coefficients on duration among drugs}
+ \label{Stbl3}
+ \small
+ \vspace{1ex}
+ \centering
+ \begin{tabular}{ccccccc}
+  \toprule
+  & Condition 1 & Condition 2 & Condition 3 & Condition 4 \\
+  \midrule
+  $r_{\mu - \log \sigma}$         & 0 & * & 0 & * \\
+  $r_{\mu}$ and $r_{\log \sigma}$ & 0 & 0 & * & * \\
+  \ExpandableInput{Table/STable3.tex}
+
+  \\[-2ex]
+  \multicolumn{5}{r}{$^\text{*}$Parameters in Table \ref{tbl3} were used.} \\
+ \end{tabular}
+\end{table}
+%%%%%%%%%%
+%%%%%%%%%%
+
+\end{document}
+
