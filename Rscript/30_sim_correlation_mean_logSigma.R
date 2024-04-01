@@ -35,7 +35,7 @@ plot_predProb <- function(x) {
     ggplot(x, aes(!!sym("time"), !!sym("prob"))) +
         geom_line(aes(group = !!sym("ID")), alpha = 0.1) +
         labs(x = "Time (min)",
-             y = "Predicted Probability",
+             y = "Predicted probability",
              title = label_r) +
         scale_x_continuous(breaks = seq(0, 120, by = 40)) +
         scale_y_continuous(breaks = scales::pretty_breaks()) +
@@ -57,7 +57,7 @@ plot_sim_duration_summary <- function(.x) {
     p1 <- ggplot(.x, aes(!!sym("r"), !!sym("mean"))) +
         geom_line() +
         geom_point() +
-        labs(x = label_r, y = "Mean of duration (min)") +
+        labs(x = label_r, y = "Mean duration (min)") +
         coord_cartesian(ylim = c(50, 80))
     p2 <- ggplot(.x, aes(!!sym("r"), !!sym("SD"))) +
         geom_line() +

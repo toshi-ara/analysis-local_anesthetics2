@@ -67,7 +67,7 @@ print(file = "../results/Table/Table5.tex",
 
 theme_survival <- list(
     labs(x = "Time (min)",
-         y = "Rate that the effect of drug persists",
+         y = "Duration of drugs effects",
          color = "Condition"),
     geom_hline(yintercept = 0.5, linetype = "dotted"),
     coord_cartesian(xlim = c(0, 180)),

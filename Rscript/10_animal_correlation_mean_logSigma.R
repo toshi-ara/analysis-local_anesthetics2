@@ -66,7 +66,7 @@ theme_predProb <- list(
 p_pred_animal1 <- ggplot(result_predProb_animal1,
                          aes(time, prob)) +
     geom_line(aes(group = ID), alpha = 0.3) +
-    labs(x = "Time (min)", y = "Predicted Probability") +
+    labs(x = "Time (min)", y = "Predicted probability") +
     facet_wrap(~ drug, nrow = 1) +
     theme_predProb
 
